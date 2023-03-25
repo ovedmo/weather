@@ -63,7 +63,6 @@ app.post('/', function(req, res) {
             console.log(weather);
 
             if (weather.main == undefined) {
-                //let mainerror = JSON.parse(weather); 
                 console.log(weather.message);
                 res.render('index', { weather: null, error: weather.message });
             } else {
